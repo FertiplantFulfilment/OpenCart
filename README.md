@@ -4,10 +4,10 @@ Fertiplant Fulfilment officiële extensie voor OpenCart
 <h1>Installatie</h1>
 <ul>
 	<li>Download <a href="https://github.com/vqmod/vqmod" target="_blank">vQmod</a> en volg hun <a href="https://github.com/vqmod/vqmod/wiki" target="_blank">Wiki</a> om het te installeren.</li>
-	<li>Download op de <a href="https://github.com/fertiplantfulfilment/OpenCart/releases" target="_blank">OpenCart Releases</a>-pagina de nieuwste Fertiplant Fulfilment release.
+	<li>Download de .zip voor de nieuwste Fertiplant Fulfilment release.
 		<ul>
-			<li>Voor opencart 2.x download je de<strong>FertiplantFulfilment-opencart-2.x map</strong></li>
-			<li>Voor opencart 3.x download je de<strong>FertiplantFulfilment-opencart-3.x map</strong></li>
+			<li>Voor opencart 2.x download je de<strong>fertiplantfulfilment-opencart-2.x map</strong></li>
+			<li>Voor opencart 3.x download je de<strong>fertiplantfulfilment-opencart-3.x map</strong></li>
 		</ul>
 	</li>
 	<li>Fertiplant Fulfilment module installeren
