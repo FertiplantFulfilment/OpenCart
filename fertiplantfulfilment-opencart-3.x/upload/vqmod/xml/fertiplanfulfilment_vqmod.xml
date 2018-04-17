@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+   <id>FertiplantFulfilment</id>
+   <version>1.0</version>
+   <vqmver>2.X</vqmver>
+   <author><a href="mailto:contact@fertiplant-fulfilment.nl">contact@fertiplant-fulfilment.nl</a></author>
+
+   <file name="catalog/controller/checkout/payment_method.php">
+       <operation info="Check quantity">
+           <search position="after"><![CDATA[public function index() {]]></search>
+           <add><![CDATA[
+           include_once("crons/check-quantity.php");
+           ]]></add>
+       </operation>
+   </file>
+
+   <file name="catalog/controller/checkout/checkout.php">
+       <operation info="Check quantity">
+           <search position="after"><![CDATA[public function index() {]]></search>
+           <add><![CDATA[
+           include_once("crons/check-quantity.php");
+           ]]></add>
+       </operation>
+   </file>
+  
+
+   <file name="catalog/view/theme/*/template/product/product.twig">
+       <operation info="Datepicker fixen opencart">
+           <search position="before"><![CDATA[$('.date').datetimepicker({]]></search>
+           <add><![CDATA[
+            var skipDate = new Date();
+            var date = new Date();
+            var day = date.getDay();
+
+            var skipDagen =  0;
+            if(day == 5){
+              skipDagen = 4;
+            }else if(day == 6){
+              skipDagen = 3
+            }else{
+              skipDagen = 2;
+            }
+
+            skipDate.setDate(skipDate.getDate() + skipDagen);
+           ]]></add>
+       </operation>
+   </file>
+
+   <file name="catalog/view/theme/*/template/product/product.twig">
+       <operation info="Datepicker fixen opencart">
+           <search position="after"><![CDATA[$('.date').datetimepicker({]]></search>
+           <add><![CDATA[
+            minDate: skipDate,
+            defaultDate: skipDate,
+            daysOfWeekDisabled: [0],
+           ]]></add>
+       </operation>
+   </file>
+
+
+</modification>
